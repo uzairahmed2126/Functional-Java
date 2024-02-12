@@ -1,9 +1,42 @@
 // pure
+
+function toHex(n) {
+    let hex = n.toString(16);
+    return hex;
+}
+console.log(toHex(10));
+
+function rgbToHex(R, G, B) {
+    return '#' + [toHex(R), toHex(G), toHex(B)].join('');
+}
+console.log(rgbToHex(15, 15, 15));
+
 function add(a, b) {
     return a + b;
 }
 console.log(add(5, 9));
 
+function exclusiveOr(A, B) {
+    return (A || B) && !(A && B);
+}
+console.log(exclusiveOr(1, 1));
+
+
+// function computeTruthTable(operator) {
+//     const truthValues = [true, false];
+//     const table = [];
+//     for (const A of truthValues) {
+//         for (const B of truthValues) {
+//             const value = operator(A, B);
+//             table.push({ A, B, value });
+//         }
+//     }
+//     return table;
+// }
+// function showTruthTable(operator) {
+//     console.table(computeTruthTable(operator));
+// }
+// showTruthTable(2);
 // pure
 function greet(name) {
     return `Assalamu Alykum ${name}`;
