@@ -1,5 +1,4 @@
 // pure
-
 function toHex(n) {
     let hex = n.toString(16);
     return hex;
