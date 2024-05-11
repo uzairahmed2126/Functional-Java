@@ -18,3 +18,9 @@ const table = (start = 1, end = 10) => start * end;
 const compose = (f) => (x) => f(x);
 const value = compose(table);
 console.log(value(1));
+
+const add = (x) => x + 1;
+const multiplyByTwo = (x) => x * 2;
+
+const composedFunction = (x) => multiplyByTwo(add(x));
+console.log(composedFunction(5));

@@ -44,3 +44,17 @@ function first(a) {
 }
 let result = first(10)(20);
 console.log(result);
+
+// function firstName(first) {
+//   return function lastName(last) {
+//     return first + last;
+//   };
+// }
+
+function firstName(first, last) {
+  return function () {
+    return first + last;
+  };
+}
+let fullName = first("uzair");
+console.log(fullName(" ahmed"));
