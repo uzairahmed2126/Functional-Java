@@ -202,22 +202,43 @@ function reverse(str) {
   }
   return str.slice(-1) + reverse(str.slice(0, -1));
 }
-console.log(reverse("hello")); //➞ "olleh"
-console.log(reverse("world")); //➞ "dlrow"
-console.log(reverse("a")); //➞ "a"
-console.log(reverse("")); //➞ ""
+// console.log(reverse("hello")); //➞ "olleh"
+// console.log(reverse("world")); //➞ "dlrow"
+// console.log(reverse("a")); //➞ "a"
+// console.log(reverse("")); //➞ ""
 
 function fact(n) {
   if (n === 1) return 1;
   return n * fact(n - 1);
 }
-console.log(fact(4));
+// console.log(fact(4));
 
 function simpleTable(n) {
   if (n === 1) return n;
-  return simpleTable(n-1);
+  return simpleTable(n - 1);
 }
-console.log(simpleTable(10));
+// console.log(simpleTable(10));
 
+// Recursion: Sum
+// Write a function that finds the sum of the first n natural numbers. Make your function recursive.
+function sum(num) {
+  if (num === 1) {
+    return 1;
+  }
+  return num + sum(num - 1);
+}
+console.log(sum(5)); //➞ 15
+// 1 + 2 + 3 + 4 + 5 = 15
+console.log(sum(1)); //➞ 1
+console.log(sum(12)); //➞ 78
+// Notes
+// Assume the input number is always positive.
+// Check the Resources tab for info on recursion.
 
-
+function addition(num1) {
+  return function (num2) {
+    return num1 + num2;
+  };
+}
+const total = addition(10);
+console.log(total(20));
